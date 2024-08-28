@@ -1,46 +1,45 @@
-<!DOCTYPE html>
-<head><link rel="stylesheet" type="text/css" href="styles.css" /><link rel="stylesheet " href="https://unpkg.com/boxicons@latest/css/boxicons.min.css ">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css ">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script></head>
+<head>
+    <title>School Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="main.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <body>
-<div class="container">
+<div class="container ">
     <div class="left_sidebar">
-        <div class="close_hamburger_btn">
-            <i class='bx bx-x-circle'></i>
-        </div>
-        <div class="logo">
+
+        <div class="logo ">
             <h2 onclick="myFunction()">School</h2>
         </div>
-        <div class="menu_items">
-            <div class="menu_item">
-                <i class='icon bx bxs-dashboard'></i>
+        <div class="menu_items ">
+            <div class="menu_item ">
+                <i class='bx bxs-dashboard'></i>
                 <p>Dashboard</p>
             </div>
-            <div class="menu_item">
-                <i class='icon bx bx-message-rounded-dots'></i>
-                <p>Messenger</p>    
+            <div class="menu_item ">
+                <i class='bx bx-message-rounded-dots'></i>
+                <p>Messenger</p>
+                <i class="fa-regular fa-circle-2 "></i>
             </div>
-            <div class="menu_item" id="calender">
-                <i class='icon bx bx-calendar'></i>
-                <p>Calendar</p>
+            <div class="menu_item ">
+                <i class='bx bx-calendar'></i>
+                <p>Calender</p>
             </div>
-            <div class="menu_item">
-                <i class='icon bx bx-file-blank'></i>
+            <div class="menu_item ">
+                <i class='bx bx-file-blank'></i>
                 <p>Database</p>
             </div>
-            <div class="menu_item">
-                <i class='icon bx bx-signal-4'></i>
+            <div class="menu_item ">
+                <i class='bx bx-signal-4'></i>
                 <p>Attendance</p>
             </div>
-            <div class="menu_item">
-                <i class='icon bx bx-cog'></i>
+            <div class="menu_item ">
+                <i class='bx bx-cog'></i>
                 <p>Settings</p>
-            </div>
-            <div class="menu_item">
-                <i class="icon fa-regular fa-user"></i>
-                <p>Profile</p>
             </div>
         </div>
     </div>
@@ -60,28 +59,49 @@
         </div>
         <div class="main_navbar">
             <div class="search_box">
-                <i class='bx bx-search-alt-2'></i> 
-                <input type="text" placeholder="Search">
-            </div>
-            <div class="dark_mode_icon" onclick="darkMode()">
-                <i class='bx bx-moon'></i>
-                <i class='bx bx-sun'></i>
+                <i class='bx bx-search-alt-2'></i> <input type="text " placeholder="Search">
             </div>
         </div>
-        <div class="menu_item_name_and_filter">
+        <div class="menu_item_name_and_filter ">
             <div class="menu_item_name">
                 <h2>Database</h2>
             </div>
             <div class="filter_and_sort">
-                <button class="overide sort_and_filter">
-                    sort<i class='bx bx-sort-down'></i>
-                </button>
-                <button class="overide sort_and_filter">
-                    Filter<i class='bx bx-filter'></i>
-                </button>
-                <button class="overide sort_and_filter" id="addStudentButton">
-                    Add student<i class="fa-solid fa-plus"></i>
-                </button>
+                <div class="sort sort_and_filter">
+                    <p>Sort</p>
+                    <i class='bx bx-sort-down'></i>
+                </div>
+                <div class="filter sort_and_filter">
+                    <p>Filter</p>
+                    <i class='bx bx-filter'></i>
+                </div>
+                <div>
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" data-toggle="modal" data-target="#myModal" class="background">Add Student</button>
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+                      
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+
             </div>
         </div>
         <div class="tabs">
@@ -95,7 +115,7 @@
             </div>
         </div>
         <div class="table">
-            <table class="table">
+            <table>
                 <tr>
                     <th>Name</th>
                     <th>ID</th>
@@ -104,188 +124,183 @@
                     <th>Gender</th>
                     <th>Email</th>
                 </tr>
-                <!-- Example rows -->
-                <tr id="gururaj">
-                    <td class="profile_name"><img src="https://i.postimg.cc/BvPJ7FHN/img1.jpg" alt="img"> Gururaj</td>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/BvPJ7FHN/img1.jpg" alt="img"> Gururaj
+                    </td>
                     <td>001</td>
                     <td>SY BCA</td>
                     <td>19</td>
                     <td>Male</td>
                     <td>gururaj@gmail.com</td>
                 </tr>
-                <tr id="sanket">
-                        <td class="profile_name"><img src="https://i.postimg.cc/c1bW8qWT/1656339664529.jpg" alt="img"> Sanket
-                        </td>
-                        <td>012</td>
-                        <td>TY BCS</td>
-                        <td>20</td>
-                        <td>Male</td>
-                        <td>sanket@gmail.com</td>
-                 </tr>
-                <tr id="hermione">
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/c1bW8qWT/1656339664529.jpg" alt="img"> Sanket
+                    </td>
+                    <td>012</td>
+                    <td>TY BCS</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>sanket@gmail.com</td>
+                </tr>
+                <tr>
                     <td class="profile_name"><img src="https://i.postimg.cc/g2M32zcz/image.png" alt="img"> Hermione
                     </td>
                     <td>003</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Hermione@gmail.com</td>
-                    </tr>
-                    <tr id="jason">
-                        <td class="profile_name"><img src="https://i.postimg.cc/c1k4jFvZ/alexander-hipp-iEEBWgY_6lA-unsplash.jpg" alt="img"> Jason
-                        </td>
-                        <td>009</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>jason@gmail.com</td>
-                    </tr>
-                    <tr id="rose">
-                        <td class="profile_name"><img src="https://i.postimg.cc/qBbpBPZB/img-2.jpg" alt="img"> Rose</td>
-                        <td>021</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Rose@gmail.com</td>
-                    </tr>
-                    <tr id="lily">
-                        <td class="profile_name"><img src="https://i.postimg.cc/SRkqKt5t/img2.jpg" alt="img"> Lily</td>
-                        <td>971</td>
-                        <td>SY BCA</td>
-                        <td>21</td>
-                        <td>Female</td>
-                        <td>Lily@gmail.com</td>
-                    </tr>
-                    <tr id="tushar">
-                        <td class="profile_name"><img src="https://i.postimg.cc/9M3C6fB2/img3.jpg" alt="img"> Tushar
-                        </td>
-                        <td>311</td>
-                        <td>FY BCA</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>Tushar@gmail.com</td>
-                    </tr>
-                    <tr id="aliana">
-                        <td class="profile_name"><img src="https://i.postimg.cc/xCR77pg2/dahiana-waszaj-XQWfro4LrVs-unsplash.jpg" alt="img">Aliana</td>
-                        <td>4011</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Aliana@gmail.com</td>
-                    </tr>
-                    <tr id="alex">
-                        <td class="profile_name"><img src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="img">Alex</td>
-                        <td>0011</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>Alex@gmail.com</td>
-                    </tr>
-                    <tr id="Sieena">
-                        <td class="profile_name "><img src=" https://i.postimg.cc/qqwr6xHB/img4.jpg " alt="img ">Sieena</td>
-                        <td>0041</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Sieena@gmail.com</td>
-                    </tr>
-                    <tr id="devid">
-                        <td class="profile_name "><img src="https://i.postimg.cc/528xwmBq/women_trending_1(1).jpg " alt="img ">Devid</td>
-                        <td>0311</td>
-                        <td>TY BCA</td>
-                        <td>20</td>
-                        <td>Male</td>
-                        <td>Devid@gmail.com</td>
-                    </tr>
-                    <tr id="josh">
-                        <td class="profile_name "><img src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg " alt="img ">Josh</td>
-                        <td>0041</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>Josh@gmail.com</td>
-                    </tr>
-                    <tr id="john">
-                        <td class="profile_name "><img src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg " alt="img ">John</td>
-                        <td>0013</td>
-                        <td>SY BCA</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>John@gmail.com</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-                <!-- More rows as needed -->
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Female</td>
+                    <td>Hermione@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/c1k4jFvZ/alexander-hipp-iEEBWgY_6lA-unsplash.jpg" alt="img"> Json
+                    </td>
+                    <td>009</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>json@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/qBbpBPZB/img-2.jpg" alt="img"> Rose</td>
+                    <td>021</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Female</td>
+                    <td>Rose@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/SRkqKt5t/img2.jpg" alt="img"> Lily</td>
+                    <td>971</td>
+                    <td>SY BCA</td>
+                    <td>21</td>
+                    <td>Female</td>
+                    <td>Lily@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/9M3C6fB2/img3.jpg" alt="img"> Tushar
+                    </td>
+                    <td>311</td>
+                    <td>FY BCA</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>Tushar@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/xCR77pg2/dahiana-waszaj-XQWfro4LrVs-unsplash.jpg" alt="img">Aliana</td>
+                    <td>4011</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Female</td>
+                    <td>Aliana@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name"><img src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="img">Alex</td>
+                    <td>0011</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>Alex@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name "><img src=" https://i.postimg.cc/qqwr6xHB/img4.jpg " alt="img ">Sieena</td>
+                    <td>0041</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>Sieena@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name "><img src="https://i.postimg.cc/528xwmBq/women_trending_1(1).jpg " alt="img ">Devid</td>
+                    <td>0311</td>
+                    <td>TY BCA</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>Devid@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name "><img src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg " alt="img ">Josh</td>
+                    <td>0041</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>Josh@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="profile_name "><img src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg " alt="img ">John</td>
+                    <td>0013</td>
+                    <td>SY BCA</td>
+                    <td>19</td>
+                    <td>Male</td>
+                    <td>John@gmail.com</td>
+                </tr>
             </table>
         </div>
     </div>
-    <div class="right_sidebar">
-        <div class="notification_and_name">
-            <div class="close_btn">
+    <div class="right_sidebar ">
+        <div class="notification_and_name ">
+            <div class="close_btn ">
                 <i class='bx bx-x-circle'></i>
             </div>
-            <div class="bell">
+            <div class="bell ">
                 <i class='bx bx-bell'></i>
                 <span></span>
             </div>
-            <img src="https://i.postimg.cc/Sxb6gssQ/img-1.jpg" alt="profile">
+            <img src="https://i.postimg.cc/Sxb6gssQ/img-1.jpg " alt="profile ">
             <p>Kery Roy</p>
             <i class='bx bx-chevron-down'></i>
         </div>
-        <div class="profile">
-            <div class="img">
-                <img src="https://i.postimg.cc/g2M32zcz/image.png" alt="studentImg">
+        <div class="profile ">
+            <div class="img ">
+                <img src="https://i.postimg.cc/g2M32zcz/image.png " alt="studentImg ">
             </div>
-            <div class="name_and_class">
+            <div class="name_and_class ">
                 <p>Hermione Granger</p>
                 <span>Hogwarts Student</span>
             </div>
-            <div class="contact_info">
+            <div class="contact_info ">
                 <i class='bx bx-message-rounded-dots'></i>
                 <i class='bx bx-phone-call'></i>
                 <i class='bx bx-envelope'></i>
             </div>
-            <div class="about">
+            <div class="about ">
                 <h4>About</h4>
                 <p>BCA student studied at ABC School of Commerce and Computer studies. I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning new things; the more, the better.</p>
             </div>
-            <div class="other_info">
-                <div class="age">
+            <div class="other_info ">
+                <div class="age ">
                     <h4>Age</h4>
                     <p>18</p>
                 </div>
-                <div class="gender">
+                <div class="gender ">
                     <h4>Gender</h4>
                     <p>Female</p>
                 </div>
-                <div class="dob">
+                <div class="dob ">
                     <h4>DOB</h4>
                     <p>12/11/2006</p>
                 </div>
-                <div class="address">
+                <div class="address ">
                     <h4>Address</h4>
                     <p>USA</p>
                 </div>
             </div>
-            <div class="student_from_same_class">
-                <div class="student_same_class_heading">
+            <div class="student_from_same_class ">
+                <div class="student_same_class_heading ">
                     <h4>Student from the same class</h4>
                 </div>
-                <div class="student_same_class_img">
-                    <img src="https://i.postimg.cc/qBbpBPZB/img-2.jpg" alt="img">
-                    <img src="https://i.postimg.cc/BvPJ7FHN/img1.jpg" alt="img">
-                    <img src="https://i.postimg.cc/SRkqKt5t/img2.jpg" alt="img">
-                    <img src="https://i.postimg.cc/xCR77pg2/dahiana-waszaj-XQWfro4LrVs-unsplash.jpg" alt="img">
-                    <img src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="img">
+                <div class="student_same_class_img ">
+                    <img src="https://i.postimg.cc/qBbpBPZB/img-2.jpg " alt="img ">
+                    <img src="https://i.postimg.cc/BvPJ7FHN/img1.jpg " alt="img ">
+                    <img src="https://i.postimg.cc/SRkqKt5t/img2.jpg " alt="img ">
+                    <img src="https://i.postimg.cc/xCR77pg2/dahiana-waszaj-XQWfro4LrVs-unsplash.jpg " alt="img ">
+                    <img src="https://i.postimg.cc/9MXPK7RT/news2.jpg " alt="img ">
                     <span>+12 More</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Modal Container -->
-    <div id="modalContainer"></div>
 </div>
-<script src="main.js"></script>
+    <!-- Modal Container -->
+<div id="modalContainer"></div>
+</div>
 </body>
