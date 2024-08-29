@@ -226,10 +226,6 @@
     background: #f1f8f8;
 }
 
-.table tr:nth-child(4) {
-    background: #5bb9c0;
-    color: #fff;
-}
 
 .table img {
     width: 40px;
@@ -449,6 +445,7 @@
     .profile .other_info h4 {
         font-size: 15px;
         color: #000;
+        
     }
     .profile .name_and_class span {
         font-size: 15px;
@@ -547,6 +544,7 @@
     .right_sidebar {
         transform: translateX(150%);
         overflow: hidden;
+        
         z-index: 100;
         position: fixed;
         top: 0;
@@ -558,7 +556,7 @@
     }
     .right_sidebar .profile {
         gap: 25px;
-        padding: 25px;
+        padding: px;
         text-align: center;
     }
     .profile .other_info {
@@ -689,6 +687,7 @@
     .profile .other_info h4 {
         font-size: 15px;
         color: #000;
+        
     }
     .profile .name_and_class span {
         font-size: 15px;
@@ -819,4 +818,38 @@
 .modal-footer {
     padding: 10px;
     text-align: right;
+}
+
+
+.stylingW {
+    padding-top: 50px;
+    font-size: 25px;
+    margin: 40px 40px 40px 40px;
+}
+
+.modal-title {
+    font-size: 35px;;
+}
+
+.highlighted {
+    background-color: #5bb9c0; /* Adjust the blue color as needed */
+    color: white; /* Ensure text color is readable on the blue background */
+}
+
+/* Add this to your CSS file */
+/* Ensure the rows are clickable */
+tr {
+    cursor: pointer;
+}
+
+/* Style for the active row */
+tr.active {
+    background-color: blue; /* Change background to blue */
+    color: white; /* Change text color to white */
+}
+
+/* Ensure the text within the active row is also visible */
+tr.active td {
+    color: white; /* Ensure text color is white */
+    background-color: #5bb9c0;
 }
