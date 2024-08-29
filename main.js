@@ -1,7 +1,16 @@
-cost students = new Map()
-students.set("Gururaj","001	SY BCA	19	Male	gururaj@gmail.com")
-students.set("","")
-
+students = ["Gururaj"],["001","SY","BCA","19","Male","gruraj@gmail.com"],
+["Sanket"],["012","TY","BCS","20","Male","sanket@gmail.com"],
+["Hermione"],["003","SY","BCA","19","Female","Hermione@gmail.com"],
+["Json"],["009","SY","BCA","19","Male","json@gmail.com"],
+["Rose"],["021","SY","BCA","19","Female","Rose@gmail.com"],
+["Lily"],["971","SY","BCA","21","Female","Lily@gmail.com"],
+["Tushar"],["311","FY","BCA","19","Male","Tushar@gmail.com"],
+["Aliana"],["4011","SY","BCA","19","Female","Aliana@gmail.com"],
+["Alex"],["011","SY","BCA","19","Male","Alex@gmail.com"],
+["Sieena"],["0041","SY","BCA","19","Male","Sieena@gmail.com"],
+["Devid"],["0311","TY","BCA","20","Male","Devid@gmail.com"],
+["Josh"],["0041","SY","BCA","19","Male","Josh@gmail.com"],
+["John"],["0013","SY","BCA","19","Male","John@gmail.com"],
 $(document).ready(function() {
   $("#openModalButton").click(function() {
     $("#myModal").fadeIn();
