@@ -1,3 +1,7 @@
+cost students = new Map()
+students.set("Gururaj","001	SY BCA	19	Male	gururaj@gmail.com")
+students.set("","")
+
 $(document).ready(function() {
   $("#openModalButton").click(function() {
     $("#myModal").fadeIn();
