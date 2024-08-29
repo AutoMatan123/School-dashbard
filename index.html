@@ -80,37 +80,35 @@
                     <button type="button" class="bx background" id="openModalButton">Add Student</button>
                   
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">Student Info</h4>
-                            </div>
-                            <div class="mb-3">
-                                <label for="studentName" class="form-label stylingW">Student Name</label>
-                                <input type="text" class="form-control" id="studentName">
-                            </div>
-                            <div class="mb-3">
-                                <label for="studentID" class="form-label stylingW">Student ID</label>
-                                <input type="text" class="form-control" id="studentID">
-                            </div>
-                            <div class="mb-3">
-                                <label for="studentClass" class="form-label stylingW">Class</label>
-                                <input type="text" class="form-control" id="studentClass">
-                            </div>
-                            <div class="mb-3">
-                                <label for="studentAge" class="form-label stylingW">Age</label>
-                                <input type="number" class="form-control" id="studentAge">
-                            </div>
-                            <div class="mb-3">
-                                <label for="studentEmail" class="form-label stylingW">Email</label>
-                                <input type="email" class="form-control" id="studentEmail">
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                      </div>
+                 <!-- Modal Structure -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="modal-title">Add New Student</h2>
+      <form id="studentForm">
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" required><br><br>
+        
+        <label for="studentId">ID:</label>
+        <input type="text" id="studentId" required><br><br>
+        
+        <label for="studentClass">Class:</label>
+        <input type="text" id="studentClass" required><br><br>
+        
+        <label for="studentAge">Age:</label>
+        <input type="number" id="studentAge" required><br><br>
+        
+        <label for="studentGender">Gender:</label>
+        <input type="text" id="studentGender" required><br><br>
+        
+        <label for="studentEmail">Email:</label>
+        <input type="email" id="studentEmail" required><br><br>
+        
+        <button type="submit" class="background">Add Student</button>
+      </form>
+    </div>
+
+  
                     </div>
                     
                   </div>
